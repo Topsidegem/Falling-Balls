@@ -6,7 +6,7 @@ using UnityEditor;
 public class Player : MonoBehaviour
 {
     [SerializeField] private int puntos = 0;
-    [SerializeField] private int vidas = 3;
+    [SerializeField] private int vidas;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +18,11 @@ public class Player : MonoBehaviour
 
         if (other.CompareTag("BadBall"))
         {
-            EditorApplication.isPlaying = false;
+            vidas -= 1;
+            if(vidas <= 0)
+            {
+                EditorApplication.isPlaying = false;
+            }
         }
     }
 }
