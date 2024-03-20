@@ -19,7 +19,8 @@ public class Menu : MonoBehaviour
 
     public void Iniciar()
     {
-        Time.timeScale = 1; 
+        playerScript.vidas = 3;
+        Time.timeScale = 1;
         mainMenu.SetActive(false);
     }
 
@@ -39,6 +40,7 @@ public class Menu : MonoBehaviour
         playerScript.vidas = 3;
         Time.timeScale = 1;
         mainMenu.SetActive(false);
+        menuPerdedor.SetActive(false);
     }
 
     public void ToMainMenu()
