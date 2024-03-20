@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd14e0e108abb749a5a6c3034e7b22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 5175947766255133085, guid: f35f8f3ef998c3f42b6a77966af4f1ed, type: 3}
+  ballPrefab: {fileID: 5175947766255133085, guid: f35f8f3ef998c3f42b6a77966af4f1ed, type: 3}
   cantidadInicial: 2
   maximoObjetosActivos: 2
   tiempoEntreSpawns: 2

@@ -1,18 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool isPaused = false;
+
+    public GameObject mainMenu;
+    public GameObject menuPerdedor;
+
+    public Player playerScript;
+
+    private void Start()
     {
-        
+        Time.timeScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Iniciar()
     {
-        
+        Time.timeScale = 1; 
+        mainMenu.SetActive(false);
+    }
+
+    public void Salir()
+    {
+        EditorApplication.isPlaying = false;
+    }
+
+    public void Perdiste()
+    {
+        menuPerdedor.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void Reiniciar()
+    {
+        playerScript.vidas = 3;
+        Time.timeScale = 1;
+        mainMenu.SetActive(false);
+    }
+
+    public void ToMainMenu()
+    {
+        Time.timeScale = 0;
+        menuPerdedor.SetActive(false);
+        mainMenu.SetActive(true);
     }
 }
