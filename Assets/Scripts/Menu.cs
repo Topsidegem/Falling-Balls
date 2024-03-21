@@ -5,8 +5,6 @@ using UnityEditor;
 
 public class Menu : MonoBehaviour
 {
-    private bool isPaused = false;
-
     public GameObject mainMenu;
     public GameObject menuPerdedor;
 

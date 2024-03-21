@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GoodBall
   - BadBall
+  - Despawn
   layers:
   - Default
   - TransparentFX

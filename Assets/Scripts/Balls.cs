@@ -8,17 +8,20 @@ public class Balls : MonoBehaviour
 
     public float count;
 
+    private void Start()
+    {
+        pool = gameObject.GetComponentInParent<PoolBalls>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) {
             pool.DespawnObject(gameObject);
         }
-    }
 
-    private void Update() {
-        count += Time.deltaTime;
-        if (count >= 5) {
+        if (other.CompareTag("Despawn"))
+        {
+            print("entro");
             pool.DespawnObject(gameObject);
-            count = 0;
         }
     }
 }
